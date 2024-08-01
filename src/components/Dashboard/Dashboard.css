@@ -1,0 +1,110 @@
+/* Dashboard.css */
+
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f0f4f8;
+}
+
+.dashboard-wrapper {
+    max-width: 900px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.dashboard-header {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 28px;
+}
+
+.user-info {
+    margin-bottom: 20px;
+}
+
+.user-info p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.signout-btn {
+    padding: 12px 24px;
+    background-color: #4a90e2;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signout-btn:hover {
+    background-color: #c0392b;
+    color: white;
+}
+
+.signin-message {
+    text-align: center;
+}
+
+.signin-message p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.signin-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4a90e2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.signin-link:hover {
+    background-color: #357abd;
+}
+
+@media (max-width: 768px) {
+    .dashboard-wrapper {
+        padding: 30px;
+    }
+
+    .dashboard-header {
+        font-size: 24px;
+    }
+
+    .user-info p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-wrapper {
+        padding: 20px;
+    }
+
+    .dashboard-header {
+        font-size: 22px;
+    }
+
+    .user-info p {
+        font-size: 14px;
+    }
+
+    .signout-btn,
+    .signin-link {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}

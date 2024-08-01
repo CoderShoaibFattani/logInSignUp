@@ -1,0 +1,153 @@
+/* Signup.css */
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f0f4f8;
+}
+
+.signup-wrapper {
+    display: flex;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.signup-form {
+    flex: 1;
+    padding: 40px;
+}
+
+.signup-form h1 {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 28px;
+}
+
+.input-div {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-div svg {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.input-box {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.input-box:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+.terms-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.terms-checkbox input {
+    margin-right: 10px;
+}
+
+.terms-checkbox p {
+    font-size: 14px;
+    color: #666;
+}
+
+.signup-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a90e2;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #357abd;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.signup-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.signup-image img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.login-link {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+}
+
+.login-link:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .signup-wrapper {
+        flex-direction: column;
+    }
+
+    .signup-image {
+        order: -1;
+        padding: 20px;
+    }
+
+    .signup-image img {
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-form {
+        padding: 20px;
+    }
+
+    .signup-form h1 {
+        font-size: 24px;
+    }
+
+    .input-box {
+        font-size: 14px;
+    }
+
+    .signup-btn {
+        font-size: 14px;
+    }
+}
