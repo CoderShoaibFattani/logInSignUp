@@ -3,34 +3,27 @@
 /* Base styles */
 .App {
     font-family: Arial, sans-serif;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0 auto;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
-nav {
-    background-color: #f0f0f0;
-    padding: 10px 0;
-    margin-bottom: 20px;
-}
-
-nav ul {
+ul {
     list-style-type: none;
-    padding: 0;
     display: flex;
     justify-content: center;
+    gap: 20px;
+
 }
 
-nav li {
-    margin: 0 15px;
-}
+
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: black;
     font-weight: bold;
     font-size: 18px;
-    transition: color 0.3s ease;
+    /* transition: color 0.3s ease; */
 }
 
 nav a:hover {
