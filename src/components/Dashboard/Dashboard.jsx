@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 
 const Dashboard = () => {
   // Get the current user from local storage
   const user = JSON.parse(localStorage.getItem("currentUser"));
+  const navigate = useNavigate();
 
   // If no user is found, render a message and a link to sign in
   if (!user) {
@@ -23,7 +24,7 @@ const Dashboard = () => {
     // Remove the current user from local storage
     localStorage.removeItem("currentUser");
     // Redirect to signin page
-    window.location.href = "/login";
+    navigate("/login");
   };
 
   return (

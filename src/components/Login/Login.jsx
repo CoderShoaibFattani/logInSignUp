@@ -10,7 +10,6 @@ const Login = () => {
   const [userPassword, setUserPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  // const [isLogedin, setIsLogedin] = useState(false);
 
   const handleSignin = (e) => {
     e.preventDefault(); // Prevent the form from submitting and refreshing the page
