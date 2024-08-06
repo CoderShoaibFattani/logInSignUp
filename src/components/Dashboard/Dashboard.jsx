@@ -1,9 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Dashboard.css";
+import productsData from "../../data";
+import CardMUI from "../CardMUI/CardMUI";
 
 const Dashboard = () => {
   // Get the current user from local storage
   const user = JSON.parse(localStorage.getItem("currentUser"));
+  const navigate = useNavigate();
 
   // If no user is found, render a message and a link to sign in
   if (!user) {
@@ -23,7 +26,7 @@ const Dashboard = () => {
     // Remove the current user from local storage
     localStorage.removeItem("currentUser");
     // Redirect to signin page
-    window.location.href = "/login";
+    navigate("/login");
   };
 
   return (
@@ -34,6 +37,19 @@ const Dashboard = () => {
         </h2>
         <div className="user-info">
           <p>Email: {user.userEmail}</p>
+        </div>
+        <div style={{ display: "flex", flexWrap: "wrap" }}>
+          {productsData.map((el, index) => {
+            return (
+              <CardMUI
+                key={index}
+                title={el.title}
+                desc={el.description}
+                id={el.id}
+                image={el.image}
+              />
+            );
+          })}
         </div>
         <button onClick={handleSignout} className="signout-btn">
           Sign Out

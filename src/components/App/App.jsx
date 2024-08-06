@@ -4,6 +4,7 @@ import SignUp from "../SignUp//Signup";
 import Dashboard from "../Dashboard/Dashboard";
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
+import ProductInfo from "../ProductInfo/ProductInfo";
 
 const NavBar = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
         <Route path="/" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/productinfo/:id" element={<ProductInfo />} />
       </Routes>
     </>
   );
